@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>my-component works and below is the example of Table</h2>
+<h3>Table Definition added to show demo of child component connecting with app-component</h3>
+<table>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>mobile</th>
+  </tr>
+  <tr>
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.mobile}}</td>
+    </tr>
+</table>
+
+</body>
+</html>
+
