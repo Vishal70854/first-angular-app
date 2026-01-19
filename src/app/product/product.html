@@ -24,7 +24,7 @@ tr:nth-child(even) {
 <h2>product component works and below is the example of Table</h2>
 <h3>Table Definition added to show demo of child component connecting with app-component</h3>
 <table>
-  <tr>
+  <tr *ngIf="products.length > 0">
     <th>id</th>
     <th>Name</th>
     <th>Brand</th>
@@ -36,6 +36,9 @@ tr:nth-child(even) {
     <td>{{product.brand}}</td>
     <td>{{product.price}}</td>
     </tr>
+    <tr *ngIf="products.length === 0">
+    <td colspan="4">No products available</td>
+  </tr>
 </table>
 
 </body>
