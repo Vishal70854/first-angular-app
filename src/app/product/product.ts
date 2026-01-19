@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ProductService } from '../product-service';
 interface ProductModel {
   id: number;
   name: string;
@@ -14,9 +15,12 @@ interface ProductModel {
   styleUrl: './product.css',
 })
 export class Product {
-   products: ProductModel[] = [
-    { id: 1, name: 'Laptop', brand: 'Apple', price: 50000 },
-    { id: 2, name: 'Mobile', brand: 'Samsung', price: 20000 },
-    { id: 3, name: 'Headphones', brand: 'Boat', price: 3000 },
-  ];
+   products: any;
+
+  // constructor will call the ProductService and get list of products
+  // (Dependency Injection is handled by Angular as ProductService has @Injectable which makes it visible to all the components in the application)
+  
+  constructor(service : ProductService){
+    this.products = service.getProducts();
+   }
 }

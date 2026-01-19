@@ -233,10 +233,13 @@
       <h1>Welcome, {{ title }}</h1>
       <p>Congratulations! Your angular app is running. 🎉</p>
       <!-- <app-my-component></app-my-component>
-      <app-user></app-user>
-      <app-product></app-product> -->
-      <input type="text" [(ngModel)]="message">
-      {{message}}
+      <app-user></app-user>-->
+      <app-product></app-product>
+      <div>
+        <h4>Two way data binding in Angular</h4>
+        <input type="text" [(ngModel)]="message">
+        {{message}}
+      </div>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
@@ -331,7 +334,7 @@
           </svg>
         </a>
       </div>
-    </div> 
+    </div>
   </div>
 </main>
 
