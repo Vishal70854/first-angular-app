@@ -21,20 +21,20 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h2>user component works and below is the example of Table</h2>
+<h2>product component works and below is the example of Table</h2>
 <h3>Table Definition added to show demo of child component connecting with app-component</h3>
 <table>
   <tr>
     <th>id</th>
-    <th>name</th>
-    <th>email</th>
-    <th>mobile</th>
+    <th>Name</th>
+    <th>Brand</th>
+    <th>Price</th>
   </tr>
-  <tr>
-    <td>{{user.id}}</td>
-    <td>{{user.name}}</td>
-    <td>{{user.email}}</td>
-    <td>{{user.mobile}}</td>
+  <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.brand}}</td>
+    <td>{{product.price}}</td>
     </tr>
 </table>
 
